@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node mailer app-email form  </title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title ">node mailer app</h1>
+        <p class="description">sends mail using node mailer app .just put in the message in the box </p>
+        <form action="/send-mail" method="POST" class="email-form" id="email-form">
+            <input type="email" name="email" id="email" placeholder="enter email message" required>
+            <br></br>
+            <br></br>
+            <textarea name="message" id="message"  rows="5" placeholder="enter message" required></textarea>
+            <br></br>
+            <br></br>
+            <button type="submit" id="submit-button">send email</button>
+
+        </form>
+
+        
+        <% if(typeof status!=='undefined' && status && typeof message!=='undefined' && message) {%>
+            <div class="status-message"><%=status%><%=status%></div>
+            <%}%>
+        <p class="copyright"> &copy; node mailer app</p>
+    </div>
+</body>
+</html>
